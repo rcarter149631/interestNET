@@ -112,23 +112,23 @@
 	<div class="login-page">
 	  <div class="form">
 	    <form class="register-form">
-	      <input type="text" placeholder="name"/>
-	      <input type="password" placeholder="password"/>
-	      <input type="text" placeholder="email address"/>
+	      <input type="text" name="username" placeholder="name"/>
+	      <input type="password" name="password" placeholder="password"/>
+	      <input type="text" name="email" placeholder="email address"/>
 	      <button>create</button>
 	      <p class="message">Already registered? <a href="#">Sign In</a></p>
 	    </form>
 	    <form class="login-form">
-	      <input type="text" placeholder="username"/>
-	      <input type="password" placeholder="password"/>
-	      <button>login</button>
-	      <p class="message">Not registered? <a href="#">Create an account</a></p>
+	      <input type="text" name="username" placeholder="username"/>
+	      <input type="password" name="password" placeholder="password"/>
+	<button>Login</button>
+	     <p class="message">Not registered? <a href="#">Create an account</a></p>
 	    </form>
 	  </div>
 	</div>
 
 	<footer id="webdev-footer">
-		<p><small>&copy; 2018. Rachel Carter, Adri Henderson, &amp; Hope Rangel. All Rights Reserverd.</p>
+		<p><small>&copy; 2018. Rachel Carter, Adri Henderson, &amp; Hope Rangel. All Rights Reserved.</p>
 	</footer>
 
 
@@ -147,3 +147,8 @@
 	</body>
 </html>
 	
+
+<?php	mysql_connect("localhost","root","");	mysql_select_db('login');	if(isset($_POST['submit'])){	$user = $_POST['name'];	$psd = $_POST['password'];	$query = "insert into loginpage (user_name,psdd) values ('$user'. '$psd');
+if(mysql_query($query)){	}}
+?>
+
